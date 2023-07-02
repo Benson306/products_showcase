@@ -12,7 +12,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
-    <div class='pl-6 pr-6 mt-10'>
+    <div class='pl-6 pr-6'>
+        <br>
+        <div class="flex justify-end mr-20">
+            <a class="bg-red-600 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded" href="admin.php">
+                    Logout
+            </a>
+        </div>
         <br />
         <p class="text-3xl text-center text-orange-500 font-semibold">Manage Products</p>
         <br />
@@ -53,9 +59,9 @@
                             Ksh. $rows[price]
                             </i>
                             <div class='flex gap-4 justify-center mt-5'>
-                                <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded'>
+                                <a href='edit.php?edit_id=$rows[id]' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded'>
                                     Edit
-                                </button>
+                                </a>
                                 <a href='delete.php?del_id=$rows[id]' class='bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded'>
                                     Delete
                                 </a>
