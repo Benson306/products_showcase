@@ -20,7 +20,7 @@ require("connection.php");
 
 
         <div class='flex flex-wrap gap-10 justify-center'>
-            <br />
+
         
         <?php
 
@@ -30,9 +30,6 @@ $run = mysqli_query($conn, $sql);
 $count = mysqli_num_rows($run);
 
 if($count > 0 ){ 
-        echo "
-        <br>
-        ";
 
         while($rows = mysqli_fetch_assoc($run)) {                                        
 
@@ -59,8 +56,7 @@ if($count > 0 ){
 
         } else {
             echo "
-            <center>
-            <p class='bg-danger'> Oops!!!Sorry we do not have a course that fits your description at the moment. Try others back in the <a href='index.php'><u><b>homepage</a></p> </center>
+            <div class='text-white text-center'>No Products To Display</div>
                             
             ";
         }

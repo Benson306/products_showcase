@@ -1,3 +1,10 @@
+<?php
+session_start();
+require("connection.php");
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +36,6 @@
         </div>
         <br>
         <div class='flex flex-wrap gap-10 justify-center'>
-            <br />
-
 
     <?php
 
@@ -40,9 +45,6 @@
     $count = mysqli_num_rows($run);
 
 	if($count > 0 ){ 
-            echo "
-            <br>
-            ";
 
             while($rows = mysqli_fetch_assoc($run)) {                                        
 
@@ -77,8 +79,7 @@
 
             } else {
                 echo "
-                <center>
-                <p class='bg-danger'> Oops!!!Sorry we do not have a course that fits your description at the moment. Try others back in the <a href='index.php'><u><b>homepage</a></p> </center>
+                <div class='text-white text-center'>No Products To Display</div>
                                 
                 ";
             }
@@ -95,3 +96,10 @@
 </body>
 
 </html>
+
+<?php }else{
+?>
+<script>window.alert("You have not Logged in");window.location="admin.php";</script>
+<?php
+}
+?>

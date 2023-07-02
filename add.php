@@ -1,3 +1,10 @@
+<?php
+session_start();
+require("connection.php");
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,3 +53,10 @@ require("connection.php");
   </div>
 </body>
 </html>
+
+<?php }else{
+?>
+<script>window.alert("You have not Logged in");window.location="admin.php";</script>
+<?php
+}
+?>
