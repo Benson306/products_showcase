@@ -83,6 +83,7 @@ if(isset($_GET['edit_id'])){
     <br>
 </body>
 </html>
+
 <?php }else{
 ?>
 <script>window.alert("You have not Logged in");window.location="admin.php";</script>
