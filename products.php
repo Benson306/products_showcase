@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<?php
+require("connection.php"); 
+
+?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,23 +18,54 @@
         <p class="text-3xl text-center text-orange-500 font-semibold">Products</p>
         <br />
 
-        
+
         <div class='flex flex-wrap gap-10 justify-center'>
             <br />
         
-        <!-- <div class="w-56">{ loading && <Spinner color1="blue" color2="#fff" textColor="#fff" /> }</div> -->
+        <?php
 
-                    <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white">
-                        <img class="object-contain h-48 w-full" src='./images/samsung.jpg' />
-                        <div class="px-6 py-4 text-center">
-                            <div class="font-bold text-xl mb-2">Tar</div>
-                            <p class="text-gray-700 text-base">
-                            Ksh. 500
-                            </p>
-                            
+$sql = "SELECT * FROM products";
+$run = mysqli_query($conn, $sql);
+
+$count = mysqli_num_rows($run);
+
+if($count > 0 ){ 
+        echo "
+        <br>
+        ";
+
+        while($rows = mysqli_fetch_assoc($run)) {                                        
+
+        echo "
+
+                <div class='max-w-xs rounded overflow-hidden shadow-lg bg-white'>
+                    <img class='object-contain h-48 w-full' src='./images/$rows[image]' />
+                    <div class='px-6 py-4 text-center'>
+                        <div class='font-bold text-xl mb-2'>$rows[title]</div>
+                        <div class='text-gray-700 text-base'>
+                        $rows[details]
                         </div>
+                        <i class='text-gray-700 text-base'>
+                        Ksh. $rows[price]
+                        </i>
+                        
                     </div>
+                </div>
+                    
+        ";
+          
+            }
 
+
+        } else {
+            echo "
+            <center>
+            <p class='bg-danger'> Oops!!!Sorry we do not have a course that fits your description at the moment. Try others back in the <a href='index.php'><u><b>homepage</a></p> </center>
+                            
+            ";
+        }
+
+        ?>
 
                    
         </div>
