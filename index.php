@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Demo</title>
+    <title>Grand Computer Store</title>
 </head>
 <body class="bg-zinc-900 min-h-screen">
     <div class="sm:block md:flex mt-20">
@@ -15,7 +15,7 @@
         </div>
         <br />
         <div class="text-slate-100 text-left sm:pt-15 md:pt-56 pl-16  basis-1/3">
-            <p class='font-extrabold text-5xl'>Electronic Store</p> 
+            <p class='font-extrabold text-5xl'>Grand Computer Store</p> 
             <p class='font-bold text-3xl'>Electronics and Accessories</p>
             <br />
             <p>
