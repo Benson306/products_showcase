@@ -53,7 +53,7 @@
         <div class="sm:block md:flex mt-2">
             <br />
             <div class="md:hidden sm:basis-2/3 pl-10 pr-4">
-                <img src="./images/samsung.jpg" width='90%' />
+                <img src="./images/mac3.jpg" width='90%' />
             </div>
             <br />
             <div class="text-slate-100 text-left sm:pt-15 md:pt-56 pl-16  basis-1/3">
@@ -70,8 +70,8 @@
                 </a>
             </div>
             <br />
-            <div class="collapse md:visible basis-2/3 pl-10 pr-4 h-0 md:h-max">
-                <img src='./images/samsung.jpg' width='90%' />
+            <div class="collapse md:visible basis-2/3 pl-20 pr-4 h-0 md:h-max">
+                <img src='./images/mac3.jpg' width='80%' />
             </div>
         </div>
 
