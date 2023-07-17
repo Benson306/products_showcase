@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Grand Computer Store</title>
 </head>
 <body class="bg-zinc-900 min-h-screen">
-
         <div>
             <ul class="flex py-2 pr-8 border-b-1 md:border-b-0">
                 <div class="flex w-full md:basis-1/4 items-center">
@@ -39,41 +38,16 @@
 
             <div class='dropDown invisible md:invisible transition duration-700 ease-in-out bg-slate-300 '>
                 <ul class='flex justify-center items-center p-2'>
-                    <li class='mediumSizeItems items-center border-black border-r-2 px-5'><a href='products.php'>Products</a></li>
-                    <li class='mediumSizeItems items-center px-5'><a href='contacts.php'>Contact Us</a></li>
+                    <li class='mediumSizeItems items-center border-black border-r-2 px-5'><a href='index.php'>Home</a></li>
+                    <li class='mediumSizeItems items-center px-5'><a href='products.php'>Products</a></li>
                 </ul>
             </div>
 
         </div>
     
-
-
-
-    <div class="sm:block md:flex mt-2">
-        <br />
-        <div class="md:hidden sm:basis-2/3 pl-10 pr-4">
-            <img src="./images/samsung.jpg" width='90%' />
-        </div>
-        <br />
-        <div class="text-slate-100 text-left sm:pt-15 md:pt-56 pl-16  basis-1/3">
-            <p class='font-extrabold text-5xl mb-5 text-red-600'>Grand Computer Store</p> 
-            <p class='font-bold text-3xl'>Electronics and Accessories</p>
-            <br />
-            <p>
-            All the best for a whole lot less.
-            Absolutely. Positively. Perfect.
-            </p>
-            <br />
-            <a href="products.php" class="bg-red-700 hover:bg-red-500 text-white text-lg text-center align-middle font-bold py-2 px-4 rounded-full">
-            View Products
-            </a>
-        </div>
-        <br />
-        <div class="collapse md:visible basis-2/3 pl-10 pr-4 ">
-            <img src='./images/samsung.jpg' width='90%' />
-        </div>
-    </div>
 </body>
+
+
 
 <script>
 
@@ -112,5 +86,5 @@
         
 </script>
 
-</html>
 
+</html>
