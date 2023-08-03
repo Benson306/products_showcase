@@ -52,13 +52,26 @@ if(isset($_SESSION['email'])){
             echo "
 
                     <div class='max-w-xs rounded overflow-hidden shadow-lg bg-white'>
-                        <img class='object-contain h-48 w-full' src='./images/$rows[image]' />
+                    ";
+
+                    // Check if the file is an image (you need to adjust the condition based on your file naming conventions)
+                    if (preg_match('/\.(jpg|jpeg|png)$/', $rows['image'])) {
+                        echo "<img class='object-contain h-48 w-full' src='./images/$rows[image]' />";
+                    }
+                    
+                    // Check if the file is a video (you need to adjust the condition based on your file naming conventions)
+                    elseif (preg_match('/\.(mp4|avi|mov)$/', $rows['image'])) {
+                        echo "<video class='object-contain h-48 w-full' controls><source src='./images/$rows[image]' type='video/mp4'></video>";
+                    }
+
+
+                    echo "
                         <div class='px-6 py-4 text-center'>
                             <div class='font-bold text-xl mb-2'>$rows[title]</div>
                             <div class='text-gray-700 text-base'>
                             $rows[details]
                             </div>
-                            <i class='text-gray-700 text-base'>
+                            <i class='text-gray-700 text-base font-bold'>
                             Ksh. $rows[price]
                             </i>
                             <div class='flex gap-4 justify-center mt-5'>

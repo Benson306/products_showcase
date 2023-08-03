@@ -56,8 +56,21 @@ if(isset($_GET['edit_id'])){
                       <input type='number' name='price' id='price' class='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder='45000' value='$rows[price]' required=''>
                   </div>
                   <div>
-                        <label class='block mb-2 text-sm font-medium text-gray-900 dark:text-white' for='file'>Select Image If You Need To Replace:</label>
-                        <img class='object-contain h-48 w-full' src='./images/$rows[image]' />
+                        <label class='block mb-2 text-sm font-medium text-gray-900 dark:text-white' for='file'>Select Image If You Need To Replace:</label>";
+                        //<img class='object-contain h-48 w-full' src='./images/$rows[image]' />
+
+                        // Check if the file is an image (you need to adjust the condition based on your file naming conventions)
+                        if (preg_match('/\.(jpg|jpeg|png)$/', $rows['image'])) {
+                            echo "<img class='object-contain h-48 w-full' src='./images/$rows[image]' />";
+                        }
+                        
+                        // Check if the file is a video (you need to adjust the condition based on your file naming conventions)
+                        elseif (preg_match('/\.(mp4|avi|mov)$/', $rows['image'])) {
+                            echo "<video class='object-contain h-48 w-full' controls><source src='./images/$rows[image]' type='video/mp4'></video>";
+                        }
+
+
+                        echo "
                         <br>
                         <input class='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400' id='file' type='file' name='file' >
                   </div>
